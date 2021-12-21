@@ -1,0 +1,202 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background: url(img/z.jpg);
+    color: #fff;
+}
+
+.content {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 99.9%;
+    
+}
+.content .flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+.nav a {
+    text-decoration: none;
+    margin: 0 0.5em;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    color: #1d1e22;
+    border-radius: 0.25em;
+    background-color: #fff;
+}
+.smooth {
+    position: relative;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    overflow: hidden;
+    display: flex;
+    height: 345vh;
+    width: 100%;
+    flex-wrap: nowrap;
+    
+}
+
+.smooth__scroll{
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    
+}
+.smooth section {
+    display: flex;
+    width: 100%;
+    margin-top: 38px;
+    min-height: 301px;
+    justify-content: center;
+    align-items: center;
+    
+}
+.links {
+    position: fixed;
+    bottom: 1em;
+    z-index: 3;
+    padding: 0.25em;
+    display: flex;
+    min-width: 100%;
+    justify-content: space-around;
+    background-color: #1d1e22;
+    box-shadow: 0px 4px 10px #9b0123;
+}
+.links .link {
+    text-decoration: none;
+    color: #fff;
+}
+
+  .ball {
+    position: absolute;
+    top: 0;
+    left: -580px;
+    display: inline-block;
+    width: 322px;
+    height: 322px;
+    margin: 0;
+    border-radius: 50%;
+    position: relative;
+    animation: preserve-3d;
+    background: url('img/m.jpg') repeat-x;
+    background-size: auto 100%;
+    -webkit-animation: move-map 170s infinite linear;
+    -moz-animation: move-map 170s infinite linear;
+    -o-animation: move-map 170s infinite linear;
+    -ms-animation: move-map 170s infinite linear;
+    animation: move-map 170s infinite linear;
+    filter: drop-shadow(0px 0px 25px orange);
+  }
+  
+  .ball:before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: -40px 10px 70px 10px rgba(0,0,0,0.5) inset;
+    z-index: 2;
+    
+  }
+  
+  .ball:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    animation: blur(0);
+    opacity: 0.3;
+    
+  }
+  
+  .ball .shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
+    -webkit-transform: rotateX(90deg) translateZ(-150px);
+    -moz-transform: rotateX(90deg) translateZ(-150px);
+    -ms-transform: rotateX(90deg) translateZ(-150px);
+    -o-transform: rotateX(90deg) translateZ(-150px);
+    transform: rotateX(90deg) translateZ(-150px);
+    z-index: -1;
+  }
+
+  
+  .stage {
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    margin: 20px;
+    -webkit-perspective: 1196px;
+    -moz-perspective: 1196px;
+    -ms-perspective: 1196px;
+    -o-perspective: 1196px;
+    perspective: 1196px;
+    -webkit-perspective-origin: 50% 50%;
+    -moz-perspective-origin: 50% 50%;
+    -ms-perspective-origin: 50% 50%;
+    -o-perspective-origin: 50% 50%;
+    perspective-origin: 50% 50%;
+  }
+  
+  @-moz-keyframes move-map {
+    0% {
+      background-position: -1940px 0; }
+  
+    100% {
+      background-position: 0 0; } }
+  
+  @-webkit-keyframes move-map {
+    0% {
+      background-position: 0 0; }
+    100% {
+      background-position: -1940px 0; }
+  }
+  
+  
+  @-o-keyframes move-map {
+    0% {
+      background-position: -1940px 0; }
+  
+    100% {
+      background-position: 0 0; } }
+  
+  @-ms-keyframes move-map {
+    0% {
+      background-position: -1940px 0; }
+  
+    100% {
+      background-position: 0 0; } }
+  
+  @keyframes move-map {
+    0% {
+      background-position: -1940px 0; }
+  
+    100% {
+      background-position: 0 0; } }
